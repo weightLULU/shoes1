@@ -647,3 +647,40 @@ input[type="text"], input[type="tel"], input[type="email"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .nav__center {
+    width: 100%;
+    order: 1; /* Перемещаем .nav__center наверх */
+    margin-bottom: 10px;
+  }
+
+  .left__links,
+  .right__btn {
+    order: 2; /* Центрируем .left__links и .right__btn по центру */
+    text-align: center;
+  }
+
+  .right__signin,
+  .right__btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Перемещаем button и input внизу */
+  .right__btn,
+  .search__btn,
+  .search__input {
+    order: 3;
+  }
+
+  /* Добавляем отступ между .left__links и .right__btn */
+  .left__links {
+    margin-bottom: 10px;
+  }
+}
